@@ -1,0 +1,107 @@
+USE `escola_notas`;
+
+-- -----------------------------------------------------
+-- Inserindo dados na tabela `Turmas`
+-- -----------------------------------------------------
+INSERT INTO Turmas (nome_turma, serie, ano_letivo) VALUES
+('5º A', '5º Ano', 2024),
+('5º B', '5º Ano', 2024),
+('6º A', '6º Ano', 2024),
+('7º A', '7º Ano', 2024),
+('8º A', '8º Ano', 2024),
+('9º A', '9º Ano', 2024);
+
+-- -----------------------------------------------------
+-- Inserindo dados na tabela `Disciplinas`
+-- -----------------------------------------------------
+INSERT INTO Disciplinas (nome_disciplina) VALUES
+('Matemática'),
+('Português'),
+('História'),
+('Geografia'),
+('Ciências'),
+('Inglês'),
+('Educação Física');
+
+-- -----------------------------------------------------
+-- Inserindo dados na tabela `Alunos`
+-- -----------------------------------------------------
+-- Alunos do 5º A (id_turma = 1)
+INSERT INTO Alunos (nome_aluno, data_nascimento, id_turma) VALUES
+('Ana Clara Lima', '2013-03-10', 1),
+('Bruno Souza Costa', '2013-08-22', 1),
+('Carlos Eduardo Alves', '2013-01-05', 1),
+('Mariana Silva Pereira', '2013-06-17', 1);
+
+-- Alunos do 6º A (id_turma = 3)
+INSERT INTO Alunos (nome_aluno, data_nascimento, id_turma) VALUES
+('Felipe Santos Gomes', '2012-04-12', 3),
+('Julia Oliveira Barros', '2012-09-01', 3),
+('Lucas Martins Ribeiro', '2012-02-28', 3);
+
+-- Alunos do 9º A (id_turma = 6)
+INSERT INTO Alunos (nome_aluno, data_nascimento, id_turma) VALUES
+('Camila Rodrigues Pires', '2009-07-19', 6),
+('Gabriel Fernandes Rocha', '2009-11-03', 6),
+('Isabela Guedes Neves', '2009-05-25', 6);
+
+-- -----------------------------------------------------
+-- Inserindo dados na tabela `Notas`
+-- -----------------------------------------------------
+-- Notas para Ana Clara Lima (id_aluno = 1) - 5º A
+INSERT INTO Notas (id_aluno, id_disciplina, valor_nota, periodo) VALUES
+(1, 1, 8.5, '1º Bimestre'), -- Matemática
+(1, 2, 9.0, '1º Bimestre'), -- Português
+(1, 5, 7.8, '1º Bimestre'), -- Ciências
+(1, 1, 9.2, '2º Bimestre'),
+(1, 2, 8.7, '2º Bimestre'),
+(1, 5, 8.1, '2º Bimestre');
+
+-- Notas para Bruno Souza Costa (id_aluno = 2) - 5º A
+INSERT INTO Notas (id_aluno, id_disciplina, valor_nota, periodo) VALUES
+(2, 1, 7.0, '1º Bimestre'),
+(2, 2, 8.2, '1º Bimestre'),
+(2, 5, 7.5, '1º Bimestre'),
+(2, 1, 7.5, '2º Bimestre'),
+(2, 2, 8.5, '2º Bimestre'),
+(2, 5, 7.9, '2º Bimestre');
+
+-- Notas para Mariana Silva Pereira (id_aluno = 4) - 5º A (aluna com boas notas)
+INSERT INTO Notas (id_aluno, id_disciplina, valor_nota, periodo) VALUES
+(4, 1, 9.5, '1º Bimestre'),
+(4, 2, 9.8, '1º Bimestre'),
+(4, 3, 9.0, '1º Bimestre'),
+(4, 4, 9.2, '1º Bimestre'),
+(4, 5, 9.7, '1º Bimestre'),
+(4, 6, 9.6, '1º Bimestre'),
+(4, 7, 10.0, '1º Bimestre');
+
+
+-- Notas para Felipe Santos Gomes (id_aluno = 5) - 6º A
+INSERT INTO Notas (id_aluno, id_disciplina, valor_nota, periodo) VALUES
+(5, 1, 6.5, '1º Bimestre'),
+(5, 2, 7.0, '1º Bimestre'),
+(5, 6, 8.0, '1º Bimestre');
+
+-- Notas para Julia Oliveira Barros (id_aluno = 6) - 6º A (boa aluna)
+INSERT INTO Notas (id_aluno, id_disciplina, valor_nota, periodo) VALUES
+(6, 1, 9.0, '1º Bimestre'),
+(6, 2, 9.5, '1º Bimestre'),
+(6, 3, 8.8, '1º Bimestre'),
+(6, 6, 9.2, '1º Bimestre');
+
+-- Notas para Gabriel Fernandes Rocha (id_aluno = 9) - 9º A
+INSERT INTO Notas (id_aluno, id_disciplina, valor_nota, periodo) VALUES
+(9, 1, 7.2, '1º Bimestre'),
+(9, 2, 6.8, '1º Bimestre'),
+(9, 4, 7.0, '1º Bimestre');
+
+-- Notas para Isabela Guedes Neves (id_aluno = 10) - 9º A (excelente aluna)
+INSERT INTO Notas (id_aluno, id_disciplina, valor_nota, periodo) VALUES
+(10, 1, 9.8, '1º Bimestre'),
+(10, 2, 9.9, '1º Bimestre'),
+(10, 3, 9.5, '1º Bimestre'),
+(10, 4, 9.7, '1º Bimestre'),
+(10, 5, 9.6, '1º Bimestre'),
+(10, 6, 10.0, '1º Bimestre'),
+(10, 7, 9.5, '1º Bimestre');
